@@ -1,0 +1,13 @@
+<html><body>
+<p>PEDIDO de VENDA</p>
+<form action="/pedinfo.apw" method="post">
+Empresa:<br />
+<input type="text" name="empresa"><br />
+Filial:<br />
+<input type="text" name="filial"><br />
+Numero do Pedido:<br />
+<input type="text" name="pedido">
+<hr>
+<input type="submit" value="Enviar">
+</form>
+</body></html>

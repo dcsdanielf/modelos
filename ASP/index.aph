@@ -1,0 +1,4 @@
+<html><body>
+<p>Ola Mundo AdvPL ASP</p>
+<p>Agora são <%=Time()%></p>
+</body></html>
