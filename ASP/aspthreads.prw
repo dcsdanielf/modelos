@@ -31,17 +31,18 @@ USER Function ASPConn()
         case cAspPage == 'postinfo'
             // Executa a pagina PostInfo
             cReturn := H_POSTINFO()
-        case cAspPage == 'pedpost'
-            // Executa a pagina PostInfo
-            cReturn := H_PEDPOST()
-        case cAspPage == 'pedinfo'
-            // Executa a pagina PostInfo
-            cReturn := H_PEDINFO()
+            Migra()
+        case cAspPage == 'aulaasp'
+            cReturn := H_AULAASP()
+        case cAspPage == 'tela'
+            cReturn := H_TELA()
+        case cAspPage == 'pesq'
+            cReturn := H_PESQ()
         otherwise
             // retorna HTML para informar
             // a condi√ß√£o de p√°gina desconhecida
             cReturn := "<html><body><center><b>"+;
-                "P√°gina AdvPL ASP n√£o encontrada."+;
+                "Pagina AdvPL ASP n„o encontrada."+;
                 "</b></body></html>"
         Endcase
         nTimer := seconds() - nTimer
@@ -50,3 +51,15 @@ USER Function ASPConn()
     Endif
 
 Return cReturn
+
+//==================================
+
+Static Function Migra()
+
+Local cNome := HTTPPOST->FIRSTNAME
+Local cSobrenome := HTTPPOST->LASTNAME
+
+Conout("Retorno da funÁ„o de inclus„o xx como valor " + cNome + " " + cSobrenome ) 
+
+
+Return

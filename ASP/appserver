@@ -1,0 +1,17 @@
+[HTTP]
+ENABLE=1
+PORT=8607
+ENVIRONMENT=P12
+PATH=C:\TOTVS\Protheus\protheus_data\web
+responsejob=webaspthreads
+
+[webaspthreads]
+type=webex
+environment=P12
+instances=1,2
+onstart=U_ASPInit
+onconnect=U_ASPConn
+
+
+http://localhost:8607/index.apw - Exemplo 1
+http://localhost:8607/formpost.apw - Exemplo 2

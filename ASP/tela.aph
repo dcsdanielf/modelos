@@ -1,0 +1,69 @@
+<%
+#INCLUDE "PROTHEUS.CH"
+Local nFor := 0
+Local aPed := {}
+%>
+
+<html>
+<head>
+<meta content="text/html; charset=ISO-8859-1"
+http-equiv="content-type">
+<title>PAgina Tela</title>
+</head>
+<body>
+<table style="text-align: left; width: 100%;" border="0" cellpadding="2"
+cellspacing="2">
+<tbody>
+<%=U_MontTel(HTTPPOST->PEDIDO)%>
+<tr>
+<td style="vertical-align: top;">Cliente<br>
+</td>
+<td style="vertical-align: top;"><%=HttpSession->cNome%><br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Numero do Pedido<br>
+</td>
+<td style="vertical-align: top;"><%=HttpSession->cPed%></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Data de Entrega<br>
+</td>
+<td style="vertical-align: top;"><%=HttpSession->cDtEnt%></td>
+</tr>
+</tbody>
+</table>
+<br>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2"
+cellspacing="2">
+<tbody>
+<tr>
+<td style="vertical-align: top;">Produto<br>
+</td>
+<td style="vertical-align: top;">Quantidade<br>
+</td>
+<td style="vertical-align: top;">Preço Unitario<br>
+</td>
+<td style="vertical-align: top;">Total<br>
+</td>
+</tr>
+<%= aPed := HttpSession->aPed%>
+<% For nFor := 1 to Len(aPed) %>
+<tr>
+<td style="vertical-align: top;"><%=aPed[nFor,1]%><br>
+</td>
+<td style="vertical-align: top;"><%=aPed[nFor,2]%><br>
+</td>
+<td style="vertical-align: top;"><%=aPed[nFor,3]%><br>
+</td>
+<td style="vertical-align: top;"><%=aPed[nFor,4]%><br>
+</td>
+</tr>
+<% Next nFor %>
+</tbody>
+</table>
+<br>
+<br>
+</body>
+</html>
+

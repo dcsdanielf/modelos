@@ -1,0 +1,9 @@
+<html><body>
+<p>Pedido de Venda</p>
+<form action="/tela.apw" method="post">
+Numero do Pedido:<br>
+<input type="text" name="pedido"><br>
+<hr>
+<input type="submit" value="Enviar">
+</form>
+</body></html>

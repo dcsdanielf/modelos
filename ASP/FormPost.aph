@@ -1,12 +1,10 @@
 <html><body>
-<p>Formulário de POST</p>
+<p>Formulario de POST</p>
 <form action="/postinfo.apw" method="post">
-First name:<br />
-<input type="text" name="firstname"><br />
-Last name:<br />
-<input type="text" name="lastname"><br />
-CPF:<br />
-<input type="text" name="CPF">
+First name:<br>
+<input type="text" name="firstname"><br>
+Last name:<br>
+<input type="text" name="lastname">
 <hr>
 <input type="submit" value="Enviar">
 </form>
