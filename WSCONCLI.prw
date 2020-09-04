@@ -60,17 +60,22 @@ Return(.T.)
 
 //==============================================================================================
 
-User Function ENVCLI()
+User Function ENVCLI(ccgc)
 
-	Local cJson := '{"CLI":[{"A1_CGC":"11111111111"}]}'
+	Local cJson := '{"CLI":[{"A1_CGC":"' + Alltrim(ccgc) +'"}]}'
 	private oRest:= FWRest():New("http://localhost:9090/rest/")
 	private aHeader := {}
 	private resultado
 	Private cError
+	Private cUser := "user1"
+	Private cPass	:= "user1"
+
+	// inclui o campo Authorization no formato : na base64 somente quando estiver habilitado a segurança no INI.
+	Aadd(aHeader, "Authorization: Basic " + Encode64(cUser+":"+cPass))
 
 	oRest:setPath('oConCli')
 
-	oRest:SetPostParams( cJSON )
+	oRest:SetPostParams( cJson )
 
 	If oRest:Post(aHeader) //oRest:Get(aHeader)
 		Conout("POST", oRest:GetResult())

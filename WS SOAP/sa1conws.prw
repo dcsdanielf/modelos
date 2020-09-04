@@ -2,7 +2,7 @@
 
 User Function SA1CLI()
 
-    Local oWS := WSCONCLI():new()
+    Local oWS := WSCONCLIENTE():new()
     Local aRet := {}
     Local aPergs := {}
     Local oWSRet    := {}
