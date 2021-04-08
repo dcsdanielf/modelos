@@ -1,9 +1,13 @@
 #include 'protheus.ch'
 #include 'fwmvcdef.ch'
 
-/*/{Protheus.doc} SF69A01T
+/*/{Protheus.doc} SF69A01W
 @description MVC do Cadastro da Necessidade de Docentes
 
+@author  Walmir Junior
+@since   21/06/2020
+@version 1.0 
+/*/
 User Function SF69A01T()
 
 	Local oBrowse
@@ -17,10 +21,13 @@ User Function SF69A01T()
 
 Return Nil
 
-//=============================================================================
 /*/{Protheus.doc} MenuDef   
 @description Montagem do Menu
 
+@author  Walmir Junior
+@since   21/06/2020
+@version 1.0 
+/*/
 Static Function MenuDef()
 
 	Local aRotina := {}
@@ -31,10 +38,13 @@ Static Function MenuDef()
 
 Return aRotina
 
-//=============================================================================
 /*/{Protheus.doc} ModelDef
 @description Monta Model de apresentação
 
+@author  Walmir Junior
+@since   21/06/2020
+@version 1.0 
+/*/
 Static Function ModelDef()
 
 	Local oModel 	:= MPFormModel():New( 'SF69X01W' )
@@ -45,11 +55,13 @@ Static Function ModelDef()
 
 Return oModel
 
-//=============================================================================
-
 /*/{Protheus.doc} ViewDef
 @description Apresentação do model e View junto
 
+@author  Walmir Junior
+@since   21/06/2020
+@version 1.0 
+/*/
 Static Function ViewDef()
 
 	Local oModel	:= ModelDef()
